@@ -23,6 +23,7 @@
 		ADA6DB5D18E7AF7E00C9C7B6 /* ProteinCountsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA6DB5C18E7AF7E00C9C7B6 /* ProteinCountsTests.m */; };
 		ADA6DB6F18E7B69100C9C7B6 /* MLPAutoCompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA6DB6918E7B69100C9C7B6 /* MLPAutoCompleteTextField.m */; };
 		ADA6DB7018E7B69100C9C7B6 /* NSString+Levenshtein.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA6DB6E18E7B69100C9C7B6 /* NSString+Levenshtein.m */; };
+		ADA6DB7218E7D27800C9C7B6 /* protein_synthesis_rate.csv in Resources */ = {isa = PBXBuildFile; fileRef = ADA6DB7118E7D27800C9C7B6 /* protein_synthesis_rate.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		ADA6DB6C18E7B69100C9C7B6 /* MLPAutoCompletionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompletionObject.h; sourceTree = "<group>"; };
 		ADA6DB6D18E7B69100C9C7B6 /* NSString+Levenshtein.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Levenshtein.h"; sourceTree = "<group>"; };
 		ADA6DB6E18E7B69100C9C7B6 /* NSString+Levenshtein.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Levenshtein.m"; sourceTree = "<group>"; };
+		ADA6DB7118E7D27800C9C7B6 /* protein_synthesis_rate.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = protein_synthesis_rate.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		ADA6DB3818E7AF7E00C9C7B6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ADA6DB7118E7D27800C9C7B6 /* protein_synthesis_rate.csv */,
 				ADA6DB3918E7AF7E00C9C7B6 /* ProteinCounts-Info.plist */,
 				ADA6DB3A18E7AF7E00C9C7B6 /* InfoPlist.strings */,
 				ADA6DB3D18E7AF7E00C9C7B6 /* main.m */,
@@ -254,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADA6DB4A18E7AF7E00C9C7B6 /* Images.xcassets in Resources */,
+				ADA6DB7218E7D27800C9C7B6 /* protein_synthesis_rate.csv in Resources */,
 				ADA6DB3C18E7AF7E00C9C7B6 /* InfoPlist.strings in Resources */,
 				ADA6DB4518E7AF7E00C9C7B6 /* Main.storyboard in Resources */,
 			);
