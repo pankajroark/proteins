@@ -73,7 +73,7 @@ NSMutableArray* rows;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return 7;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -102,8 +102,21 @@ NSMutableArray* rows;
     NSString* searchText = [self.searchBox text];
     NSLog(@"search text : %@", searchText);
     NSArray* row = [dict objectForKey: searchText];
+    [self updateHistory:row];
+}
+
+- (void) updateHistory: (NSArray*) row
+{
     NSLog(@"row : %@", row);
-    [rows addObject: row];
+    NSMutableArray* newRows = [[NSMutableArray alloc] init];
+    for( NSArray* existingRow in rows)
+    {
+        if(![row isEqualToArray: existingRow]) {
+            [newRows addObject:existingRow];
+        }
+    }
+    [newRows addObject: row];
+    rows = newRows;
     NSLog(@"go rows count: %d", [rows count]);
     [self.history reloadData];
 }
