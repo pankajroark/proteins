@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MLPAutoCompleteTextFieldDataSource.h"
 
-@interface UCSFViewController : UIViewController
+
+@interface UCSFViewController : UIViewController <MLPAutoCompleteTextFieldDataSource>
+@property (weak, nonatomic) IBOutlet UIButton *goBtn;
 
 @end

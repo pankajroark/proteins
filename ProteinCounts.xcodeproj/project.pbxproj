@@ -21,6 +21,8 @@
 		ADA6DB5318E7AF7E00C9C7B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA6DB3518E7AF7E00C9C7B6 /* UIKit.framework */; };
 		ADA6DB5B18E7AF7E00C9C7B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADA6DB5918E7AF7E00C9C7B6 /* InfoPlist.strings */; };
 		ADA6DB5D18E7AF7E00C9C7B6 /* ProteinCountsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA6DB5C18E7AF7E00C9C7B6 /* ProteinCountsTests.m */; };
+		ADA6DB6F18E7B69100C9C7B6 /* MLPAutoCompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA6DB6918E7B69100C9C7B6 /* MLPAutoCompleteTextField.m */; };
+		ADA6DB7018E7B69100C9C7B6 /* NSString+Levenshtein.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA6DB6E18E7B69100C9C7B6 /* NSString+Levenshtein.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,13 @@
 		ADA6DB5818E7AF7E00C9C7B6 /* ProteinCountsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ProteinCountsTests-Info.plist"; sourceTree = "<group>"; };
 		ADA6DB5A18E7AF7E00C9C7B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ADA6DB5C18E7AF7E00C9C7B6 /* ProteinCountsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProteinCountsTests.m; sourceTree = "<group>"; };
+		ADA6DB6818E7B69100C9C7B6 /* MLPAutoCompleteTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextField.h; sourceTree = "<group>"; };
+		ADA6DB6918E7B69100C9C7B6 /* MLPAutoCompleteTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPAutoCompleteTextField.m; sourceTree = "<group>"; };
+		ADA6DB6A18E7B69100C9C7B6 /* MLPAutoCompleteTextFieldDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextFieldDataSource.h; sourceTree = "<group>"; };
+		ADA6DB6B18E7B69100C9C7B6 /* MLPAutoCompleteTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextFieldDelegate.h; sourceTree = "<group>"; };
+		ADA6DB6C18E7B69100C9C7B6 /* MLPAutoCompletionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompletionObject.h; sourceTree = "<group>"; };
+		ADA6DB6D18E7B69100C9C7B6 /* NSString+Levenshtein.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Levenshtein.h"; sourceTree = "<group>"; };
+		ADA6DB6E18E7B69100C9C7B6 /* NSString+Levenshtein.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Levenshtein.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +121,7 @@
 		ADA6DB3718E7AF7E00C9C7B6 /* ProteinCounts */ = {
 			isa = PBXGroup;
 			children = (
+				ADA6DB6718E7B69100C9C7B6 /* MLPAutoCompleteTextField */,
 				ADA6DB4018E7AF7E00C9C7B6 /* UCSFAppDelegate.h */,
 				ADA6DB4118E7AF7E00C9C7B6 /* UCSFAppDelegate.m */,
 				ADA6DB4318E7AF7E00C9C7B6 /* Main.storyboard */,
@@ -150,6 +160,20 @@
 				ADA6DB5918E7AF7E00C9C7B6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ADA6DB6718E7B69100C9C7B6 /* MLPAutoCompleteTextField */ = {
+			isa = PBXGroup;
+			children = (
+				ADA6DB6818E7B69100C9C7B6 /* MLPAutoCompleteTextField.h */,
+				ADA6DB6918E7B69100C9C7B6 /* MLPAutoCompleteTextField.m */,
+				ADA6DB6A18E7B69100C9C7B6 /* MLPAutoCompleteTextFieldDataSource.h */,
+				ADA6DB6B18E7B69100C9C7B6 /* MLPAutoCompleteTextFieldDelegate.h */,
+				ADA6DB6C18E7B69100C9C7B6 /* MLPAutoCompletionObject.h */,
+				ADA6DB6D18E7B69100C9C7B6 /* NSString+Levenshtein.h */,
+				ADA6DB6E18E7B69100C9C7B6 /* NSString+Levenshtein.m */,
+			);
+			path = MLPAutoCompleteTextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +275,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADA6DB4818E7AF7E00C9C7B6 /* UCSFViewController.m in Sources */,
+				ADA6DB7018E7B69100C9C7B6 /* NSString+Levenshtein.m in Sources */,
+				ADA6DB6F18E7B69100C9C7B6 /* MLPAutoCompleteTextField.m in Sources */,
 				ADA6DB3E18E7AF7E00C9C7B6 /* main.m in Sources */,
 				ADA6DB4218E7AF7E00C9C7B6 /* UCSFAppDelegate.m in Sources */,
 			);
