@@ -15,8 +15,8 @@
 @implementation UCSFViewController
 
 NSMutableDictionary* dict;
-
 NSString *content;
+NSMutableArray* rows;
 
 - (void)viewDidLoad
 {
@@ -24,6 +24,9 @@ NSString *content;
     _goBtn.layer.cornerRadius = 4;
 	// Do any additional setup after loading the view, typically from a nib.
     [self loadData];
+    self.history.dataSource = self;
+    self.history.delegate = self;
+    rows = [[NSMutableArray alloc] init];
 }
 
 - (void) loadData
@@ -69,5 +72,39 @@ NSString *content;
     handler(filtered);
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 4;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString* CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    int row = [indexPath row];
+    NSLog(@"rows count: %d", [rows count]);
+    NSLog(@"row: %d", row);
+    if([rows count] > row) {
+        NSArray* rowData = [rows objectAtIndex: [rows count] - row - 1];
+        NSString* proteinName = [rowData objectAtIndex: 0];
+        NSString* count = [rowData objectAtIndex: 1];
+        NSString* rowText = [NSString stringWithFormat:@"%@ - %@", proteinName, count];
+        NSLog(@"row text: %@", rowText);
+        cell.textLabel.text = rowText;
+    }
+    return cell;
+}
 
+
+- (IBAction)onGo:(id)sender {
+    NSLog(@"on go called");
+    NSString* searchText = [self.searchBox text];
+    NSLog(@"search text : %@", searchText);
+    NSArray* row = [dict objectForKey: searchText];
+    NSLog(@"row : %@", row);
+    [rows addObject: row];
+    NSLog(@"go rows count: %d", [rows count]);
+    [self.history reloadData];
+}
 @end

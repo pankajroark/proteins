@@ -10,7 +10,10 @@
 #import "MLPAutoCompleteTextFieldDataSource.h"
 
 
-@interface UCSFViewController : UIViewController <MLPAutoCompleteTextFieldDataSource>
+@interface UCSFViewController : UIViewController <MLPAutoCompleteTextFieldDataSource, UITableViewDelegate, UITableViewDataSource>
+- (IBAction)onGo:(id)sender;
+@property (weak, nonatomic) IBOutlet UITableView *history;
+@property (weak, nonatomic) IBOutlet UITextField *searchBox;
 @property (weak, nonatomic) IBOutlet UIButton *goBtn;
 
 @end
